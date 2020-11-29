@@ -15,7 +15,8 @@ def selection_sort_descend_trace(numbers):
         temp = numbers[i]
         numbers[i] = numbers[index_largest]
         numbers[index_largest] = temp
-        print(*numbers, sep=' ')
+        print(*numbers, sep=' ', end=" ")
+        print()
 
 
 if __name__ == "__main__":
