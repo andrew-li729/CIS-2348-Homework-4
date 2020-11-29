@@ -5,10 +5,6 @@
 num_calls = 0
 
 
-# TODO: Write the partitioning algorithm - pick the middle element as the
-#       pivot, compare the values using two index variables l and h (low and high),
-#       initialized to the left and right sides of the current elements being sorted,
-#       and determine if a swap is necessary
 def partition(user_ids, i, k):
     midpoint = i + (k-i) // 2
     pivot = user_ids[midpoint]
@@ -37,19 +33,14 @@ def partition(user_ids, i, k):
             return h
 
 
-# TODO: Write the quicksort algorithm that recursively sorts the low and
-#       high partitions. Add 1 to num_calls each time quisksort() is called
 def quicksort(user_ids, i, k):
     j = 0
-    """  Base case: If there are 1 or zero entries to sort,
-          partition is already sorted  """
+
     if i >= k:
         return
-    """  Partition the data within the array. Value j returned
-          from partitioning is location of last item in low partition. """
+
     j = partition(user_ids, i, k)
-    """  Recursively sort low partition (i to j) and
-          high partition (j + 1 to k) """
+
     quicksort(user_ids, i, j)
     quicksort(user_ids, j + 1, k)
     return
