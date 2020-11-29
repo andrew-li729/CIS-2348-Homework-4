@@ -9,7 +9,7 @@ def fat_burning_heart_rate(age):
 def get_age():
     age_input = int(input())
     if age_input < 18 or age_input > 75:
-        raise ValueError("Invalid Age.")
+        raise ValueError("Invalid age.")
     return age_input
 
 
