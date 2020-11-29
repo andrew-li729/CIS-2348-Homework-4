@@ -16,5 +16,5 @@ def get_age():
 if __name__ == '__main__':
     age = get_age()
     rate = fat_burning_heart_rate(age)
-    print("Fat burning hear rate for a {} year-old: {} bpm".format(age, rate))
+    print("Fat burning heart rate for a {} year-old: {} bpm".format(age, rate))
 
