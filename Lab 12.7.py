@@ -20,4 +20,4 @@ if __name__ == '__main__':
         print("Fat burning heart rate for a {} year-old: {} bpm".format(age, rate))
     except ValueError as exception:  # takes value error from get_age function and prints if ValueError occurs
         print(exception)
-        print("Could not calculate heart rate info.")
+        print("Could not calculate heart rate info.\n")
