@@ -14,7 +14,12 @@ def get_age():
 
 
 if __name__ == '__main__':
-    age = get_age()
-    rate = fat_burning_heart_rate(age)
-    print("Fat burning heart rate for a {} year-old: {} bpm".format(age, rate))
+    try:
+        age = get_age()
+        rate = fat_burning_heart_rate(age)
+        print("Fat burning heart rate for a {} year-old: {} bpm".format(age, rate))
+    except ValueError as exception:
+        print(exception)
+        print("Could not calculate heart rate info.")
+
 
